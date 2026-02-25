@@ -115,27 +115,30 @@
             padding: 10px 15px 45px; 
         }
         
+        /* التعديل هنا: لزقنا الـ ID في التاريخ */
         .id-number { 
             font-size: 26px; 
             font-weight: 800; 
-            margin-bottom: 0px; 
+            margin-bottom: -5px; /* دي الزقة اللي بتلزقهم في بعض */
             letter-spacing: -1px; 
+            line-height: 1; /* بتشيل الفراغ الطبيعي للخط */
         }
         
-        /* التعديل هنا: تخنين التاريخ وضم الساعة ليه */
+        /* التعديل هنا: كبرنا التاريخ وزودنا مسافة سطر ونص للساعة */
         .live-date { 
-            font-size: 24px; 
-            font-weight: 800; /* بقى غليظ زي الساعة */
-            margin-bottom: 5px; /* رفعنا الساعة ناحيته */
+            font-size: 26px; /* كبرناه زي ما طلبت */
+            font-weight: 800; 
+            margin-bottom: 35px; /* دي مسافة السطر ونص تقريباً */
             letter-spacing: 0px;
+            line-height: 1;
         }
         
         .live-time { 
             font-size: 32px; 
             font-weight: 800; 
+            line-height: 1;
         }
 
-        /* التعديل هنا: عرض المربع الغامق زاد سنة */
         .card-footer-section { background-color: #477be5; height: 35px; width: 100%; }
         
         .white-base { background-color: #fff; min-height: 90px; border-radius: 0 0 15px 15px; }
@@ -178,44 +181,4 @@
                 <div class="student-info">
                     <div class="student-photo-container">
                         <img src="personal-photo.jpg" alt="Student" class="student-photo">
-                        <div class="academic-year">2025-2026</div>
-                    </div>
-                    <div class="text-info">
-                        <div class="student-name">مدحت شريف جابر<br>مرقص</div>
-                        <div class="student-details">22-0279910896<br>إدارة , فرقة رابعة</div>
-                    </div>
-                </div>
-
-                <div class="numbers-section">
-                    <div class="id-number">ID: 30410102402799</div>
-                    <div class="live-date" id="dateDisplay"></div>
-                    <div class="live-time" id="timeDisplay"></div>
-                </div>
-                
-                <div class="card-footer-section"></div>
-            </div>
-            
-            <div class="white-base"></div>
-            
-        </div>
-    </div>
-
-    <div class="bottom-nav">
-        <button class="nav-item active"><i class="fas fa-home"></i></button>
-        <button class="nav-item"><i class="fas fa-users"></i></button>
-        <button class="nav-item"><i class="fas fa-bell"></i></button>
-        <button class="nav-item"><i class="fas fa-bars"></i></button>
-    </div>
-</div>
-
-<script>
-    function updateClock() {
-        const now = new Date();
-        document.getElementById('dateDisplay').innerText = now.toISOString().split('T')[0];
-        document.getElementById('timeDisplay').innerText = now.toLocaleTimeString('en-GB', { hour12: false });
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-</script>
-</body>
-</html>
+                        <div class="academic-year">20
